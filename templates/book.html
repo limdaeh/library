@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+<title>{{name}}</title>
+
+{% block content %}
+
+{{ super() }}
+{% for cat, msg in get_flashed_messages(True) %}
+<div class="flash {{cat}}">{{msg}}</div>
+{% endfor %}
+{{ post | safe}}
+<ul class="book">
+    <h1>{{name}}</h1>
+    <img src="../static/bookcovers/{{preview}}">
+    <div class="aboutBook_all">
+        <p>Название: {{name}}</p>
+        <p>Автор: {{author}}</p>
+        <p>Жанр: {{genre}}</p>
+        <p>ISBN: {{isbn}}</p>
+        <p>Число страниц: {{pages}}</p>
+        <p>Издатель: {{phouse}}</p>
+        <p>Год издания: {{year}}</p>
+        <p>Дата печати: {{edition}}</p>
+    </div>
+    {% if availibility|int() == 1-%}
+    <form action="" method="post" class="form-contact-2">
+        <div class="createOrder">
+
+            <select name="select">Выбрать способ получения
+                <option>Получить в библиотеке на Кирова</option>
+                <option>Получить в библиотеке на Коммунаров</option>
+            </select>
+            <input class="btnOrder" type="submit" value="Заказать книгу">
+        </div>
+        <div class="createOrder">
+            <p><label>Выберите Категорию:</label>
+                <select name="object">
+                    <option selected="selected" value=123>...</option>
+                    {% for g in groups %}
+                    <option value={{g.groupid}}>{{ g.groupname }}</option>
+                    {% endfor %}
+                </select>
+            <p><input class="btnOrder" type="submit" value="Добавить книгу в выбранную категорию" />
+        </div>
+    </form>
+    {% else -%}
+    <li>
+        <p>Нет в наличии</p>
+    </li>
+    {% endif %}
+</ul>
+{% endblock -%}

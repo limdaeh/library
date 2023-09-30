@@ -1,0 +1,387 @@
+html,
+body {
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+ul.mainmenu {
+    display: flex;
+    list-style: none;
+    background: rgb(155 67 67);
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.74);
+    font-size: 20px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    height: 7vh;
+}
+
+ul.mainmenu li {
+    height: 5vh;
+    width: 29vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 19px;
+    text-decoration: none;
+    border-radius: 0.5vh;
+    color: rgba(255, 255, 255, 0.74);
+    background-color: #00000000;
+    font-size: 3vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+ul.mainmenu li:hover {
+    background-color: #0000006c;
+}
+
+ul.mainmenu li.last {
+    float: right;
+}
+
+
+ul.mainmenu li a {
+    color: rgba(255, 255, 255, 0.74);
+    display: flex;
+    text-decoration: none;
+}
+
+ul.mainmenu li a:hover {
+    color: rgb(255, 255, 255);
+
+}
+
+div.content {
+    margin: 10px;
+}
+
+.form-contact{
+    width: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+.form-contact label {
+    display: inline-block;
+    min-width: 80px;
+}
+
+.form-contact p {
+    margin: 10px 0 10px 0;
+}
+
+.form-contact input{
+    margin-top: 1vh;
+}
+
+.form-contact input[type=submit],
+textarea {
+    font-size: 16px;
+}
+
+.flash {
+    padding: 10px;
+}
+
+.flash.success {
+    border: 1px solid #21DB56;
+}
+
+.profile-ava {
+    width: 160px;
+    text-align: center;
+    overflow: hidden;
+    background: #eee;
+    padding: 10px;
+}
+
+.profile-ava img {
+    max-width: 150px;
+    height: auto;
+}
+
+.profile-load {
+    margin-top: 10px;
+    overflow: hidden;
+    max-width: 150px;
+}
+
+.profile-load input[type=submit],
+input[type=file] {
+    width: 100%;
+    font-size: 18px;
+}
+
+.profile-load p {
+    margin-top: 10px;
+    overflow: hidden;
+    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-panel {
+    padding: 0 0 0 10px;
+}
+
+ul.profile-info {
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    color: #fafafa;
+}
+
+ul.profile-info li {
+    margin-top: 10px;
+}
+
+.books img {
+    width: 150px;
+    height: 220px;
+}
+
+.book img {
+    max-width: 150px;
+    height: auto;
+}
+
+ul.book {
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5vh;
+    background-color: #898989;
+    color: #eee;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3vh;
+
+}
+
+#aboutCreateOrder {
+    text-align: center;
+    font-size: 2vh;
+}
+
+.books {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+}
+
+
+.elBook {
+    margin: 4vh 4vh 4vh 4vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+.aboutBook {
+    font-size: 2vh;
+}
+
+.aboutBook_all{
+    background-color: #914a45;
+    margin: 3vh 1vh 3vh 1vh;
+    width: 44vh;
+    border-radius: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: antiquewhite;
+    font-size: 1.5vh;
+}
+
+.form-contact-2{
+    width: 44vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #914a45;
+    border-radius: 1vh;
+    padding: 2vh 0vh 1vh 0vh;
+    color: white;
+}
+
+.createOrder{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 10vh;
+    background-color: white;
+    margin: 1vh;
+    width: 80%;
+    color: black;
+    border-radius: 1vh;
+    justify-content: center;
+}
+
+.btnOrder{
+    margin: 0.5vh;
+    width: 26vh;
+    height: 4vh;
+    text-align: center;
+}
+
+.profile-table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.photoProfile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnPhotoProfile{
+    margin: 0 1vh 1vh 0;
+}
+
+.aboutProfile_1{
+    background-color: #914a45;
+    font-family: monospace;
+    font-size: 2vh;
+    padding: 2vh;
+}
+
+.outFromProfile{
+    color: white;
+    background-color: #898989;
+}
+
+.youBooks{
+    background-color: #898989;
+    width: 74vh;
+    height: 7vh;
+    color: white;
+    font-weight: 900;
+    font-size: 3.3vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1vh;
+}
+
+.allYouBooks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.infoYouBook{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.bookDays{
+    width: 29vh;
+    background-color: #884f47;
+    color: white;
+    height: 5vh;
+    margin: 2vh 4vh 1vh 0vh;
+    display: flex;
+    border-radius: 1vh;
+    font-size: 2vh;
+    align-items: center;
+    justify-content: center;
+    padding: 0vh 0vh 0vh 3vh;
+    list-style: none;
+}
+
+.allYouBooks-2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.days{
+    width: 34vh;
+    background-color: #884f47;
+    color: white;
+    height: 5vh;
+    margin: 2vh 0vh 1vh 0vh;
+    display: flex;
+    border-radius: 1vh;
+    font-size: 1.8vh;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0vh 0vh 0vh 3vh;
+}
+
+.groupName{
+    width: 54vh;
+    background-color: #898989;
+    font-size: 2vh;
+    list-style: none;
+    text-align: center;
+    color: white;
+}
+
+.groups{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.group-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1vh;
+}
+
+.bookInGroup{
+    background-color: #884f47;
+    display: flex;
+    font-size: 2vh;
+    list-style: none;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+    width: 54vh;
+    height: 4vh;
+    align-items: center;
+    justify-content: center;
+}

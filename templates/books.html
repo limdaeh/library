@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+{% for cat, msg in get_flashed_messages(True) %}
+<div class="flash {{cat}}">{{msg}}</div>
+{% endfor %}
+<p id="aboutCreateOrder">(Для просмотра информации и заказа книги - кликните по ее названию)</p>
+<div>
+        {% block books %}
+        <ul class="books">
+                {% for b in books -%}
+                <div class="elBook">
+                        <div class="imgBook">
+                                <img src="../static/bookcovers/{{b.preview}}" />
+                        </div>
+                        <li class="aboutBook"><a href="{{url_for('showBook', alias = b.bookid)}}">{{b.name}}</a></li>
+                </div>
+                {% endfor -%}
+        </ul>
+        {% endblock %}
+</div>
+{% endblock -%}
